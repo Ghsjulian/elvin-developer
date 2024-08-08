@@ -1,11 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+    const [isOpen, setisOpen] = useState(true)
     const navRef = useRef(null);
     const openNav = () => {
         navRef.current.classList.toggle("navbar");
+        setisOpen(!isOpen)
     };
+
     return (
         <header>
             <img
@@ -33,7 +36,7 @@ const Header = () => {
             <img
                 onClick={openNav}
                 className="menu"
-                src="icons/burger_menu.png"
+                src={isOpen? "icons/burger_menu.png" : "icons/delete.png"} 
             />
         </header>
     );

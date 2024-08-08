@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { GoArrowRight } from "react-icons/go";
 
 const Hero = () => {
+    const imgRef  = useRef(null)
+    useEffect(()=>{
+            var imgs = "hero_";
+            var count = 1;
+            setInterval(() => {
+                imgRef.current.src = "images/" + imgs + count + ".png";
+                count += 1;
+                if (count >= 4) {
+                    count = 1;
+                }
+            }, 7000);
+    },[imgRef])
+    
     return (
         <main>
-            <section className="hero">
+            <section
+                className="hero">
                 <h2>
                     Innovative Solutions for Your Business -{" "}
                     <span className="subtitle">Elviano Digital Agency</span>
@@ -27,8 +41,9 @@ const Hero = () => {
                     </button>
                 </div>
             </section>
-            <section className="hero-img">
-                <img id="hero-logo" src="./images/hero_3.png" />
+            <section
+                className="hero-img">
+                <img ref={imgRef} id="hero-logo" src="./images/hero_3.png" />
             </section>
         </main>
     );
