@@ -78,6 +78,11 @@ header {
     z-index: 999;
     border-bottom: 0.1px solid rgba(0, 104, 179, 0.236);
 }
+header .dev-logo {
+    width: 110px;
+    height: 50px;
+    object-fit: cover;
+}
 
 header .logo {
     color: #f86300;
@@ -167,7 +172,7 @@ main .hero {
 .hero h2 {
     font-size: 1.9rem;
     color: #083501;
-    margin: .3rem .5rem;
+    margin: 0.3rem 0.5rem;
 }
 
 .hero h2 span {
@@ -176,12 +181,12 @@ main .hero {
 
 .hero h3 {
     color: #f04d01;
-    margin: .5rem;
+    margin: 0.5rem;
 }
 
 .hero article {
     color: black;
-    margin: .3rem .5rem;
+    margin: 0.3rem 0.5rem;
     line-height: 2rem;
     text-transform: capitalize;
 }
@@ -217,35 +222,18 @@ main .hero-img img {
 
 .hero .btn-area {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 1rem 0.2rem;
-    gap: 1rem;
-    overflow: hidden;
+    gap: 0.7rem;
 }
 
-.hero .btn-area a {
+.hero .btn-area button {
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-
-}
-
-.hero .btn-area #shop {
-    margin: 0.5rem;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    background: #052800;
-    color: #ffffff;
-    border-radius: 8px;
-    font-weight: 800;
-    transition: 0.3s ease-in;
+    margin: 0.5rem auto;
 }
 
 .hero .btn-area #view {
@@ -254,20 +242,15 @@ main .hero-img img {
     border: none;
     cursor: pointer;
     display: flex;
+    text-align: center;
     justify-content: space-around;
     align-items: center;
     padding: 0.5rem 1rem;
-    background: #864b00;
+    background: #008881;
     color: #ffffff;
     border-radius: 8px;
     font-weight: 800;
     transition: 0.3s ease-in;
-}
-
-.hero .btn-area #shop:hover {
-    background: transparent;
-    border: 1px solid #008c14;
-    color: #008c14;
 }
 
 .hero .btn-area #view:hover {
@@ -290,6 +273,43 @@ main .hide {
     display: none;
 }
 
+/* FOOTER STYLING HERE */
+footer {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    border-top: 0.1px solid #b4b4b4;
+    padding: 1rem 0.7rem;
+    background: #ffffff;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    bottom: 0;
+}
+
+footer .social {
+    width: 100%;
+    display: flex;
+    margin: 0.5rem auto;
+    padding: 0 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    place-items: center;
+}
+.social a {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    margin: 0.5rem;
+}
+.social a img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
 /*  CSS RESPONSIVE MEDIA QUERY  */
 @media (max-width: 768px) {
     header .menu {
@@ -298,9 +318,9 @@ main .hide {
 
     header nav {
         position: fixed;
-        left: -40%;
+        left: -60%;
         top: 0;
-        width: 40%;
+        width: 60%;
         height: 100%;
         background: rgb(2, 27, 44);
         padding: 0.5rem 1rem;
@@ -310,7 +330,7 @@ main .hide {
     }
 
     .navbar {
-        width: 40%;
+        width: 60%;
         left: 0;
         transition: 0.3s ease-in;
     }
@@ -335,6 +355,9 @@ main .hide {
         margin-top: 5%;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+    }
+    main :nth-child(2) {
+        order: -1;
     }
 
     main .hero {
