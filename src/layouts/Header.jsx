@@ -36,7 +36,7 @@ const Header = () => {
             <img
                 onClick={openNav}
                 className="menu"
-                src={isOpen? "icons/burger_menu.png" : "icons/delete.png"} 
+                src={isOpen? "/icons/burger_menu.png" : "/icons/delete.png"} 
             />
         </header>
     );

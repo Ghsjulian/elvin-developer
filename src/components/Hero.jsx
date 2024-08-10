@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { GoArrowRight } from "react-icons/go";
 
 const Hero = () => {
+    const initImg = "./images/hero_3.png"
     const imgRef = useRef(null);
     useEffect(() => {
         var imgs = "hero_";
@@ -9,11 +10,11 @@ const Hero = () => {
         setInterval(() => {
             imgRef.current.src = "images/" + imgs + count + ".png";
             count += 1;
-            if (count >= 4) {
+            if (count >= 3) {
                 count = 1;
             }
         }, 7000);
-    }, [imgRef]);
+    }, []);
 
     return (
         <main>
@@ -41,7 +42,7 @@ const Hero = () => {
                 </div>
             </section>
             <section className="hero-img">
-                <img ref={imgRef} id="hero-logo" src="./images/hero_3.png" />
+                <img ref={imgRef} id="hero-logo" src={initImg} />
             </section>
         </main>
     );

@@ -20,8 +20,8 @@ const WhoWeAre = () => {
                         success. Our agency is built on a foundation of
                         innovation, collaboration, and a relentless pursuit of
                         excellence.
-                    <div id="services"></div>
                     </p>
+                    <div id="services"></div>
                 </div>
             </div>
         </section>
