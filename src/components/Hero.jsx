@@ -1,23 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { GoArrowRight } from "react-icons/go";
 
 const Hero = () => {
-    const images = [
-        "./images/hero_1.png",
-        "./images/hero_2.png",
-        "./images/hero_3.png"
-    ];
-    const [currentIndex, setCurrentIndex] = useState(0);
     const imgRef = useRef(null);
-
-    const handleNext = () => {
-        setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-    };
-
     useEffect(() => {
-        const intervalId = setInterval(handleNext, 3000);
-        return () => clearInterval(intervalId);
-    }, []);
+        var imgs = "hero_";
+        var count = 1;
+        setInterval(() => {
+            imgRef.current.src = "images/" + imgs + count + ".png";
+            count += 1;
+            if (count >= 4) {
+                count = 1;
+            }
+        }, 7000);
+    }, [imgRef]);
 
     return (
         <main>
@@ -38,32 +34,14 @@ const Hero = () => {
                     customized digital strategy that drives results.
                 </article>
                 <div className="btn-area">
-                    <a href="#services" id="view">
+                    <a id="view" href="#services">
                         Explore Services
                         <GoArrowRight size={23} />
                     </a>
                 </div>
             </section>
             <section className="hero-img">
-                {images.map((element, index) => {
-                    return (
-                        <img
-                            key={index}
-                            id="hero-logo"
-                            src={element}
-                            style={{
-                                transition: "0.4s ease-in-out",
-                                transform: `translateX(${
-                                    index === currentIndex
-                                        ? 0
-                                        : index < currentIndex
-                                        ? "-100%"
-                                        : "100%"
-                                })`,
-                            }}
-                        />
-                    );
-                })}
+                <img ref={imgRef} id="hero-logo" src="./images/hero_3.png" />
             </section>
         </main>
     );
