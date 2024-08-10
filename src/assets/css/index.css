@@ -212,14 +212,23 @@ main .hero {
 }
 
 main .hero-img {
-    animation: zoom-in 7s linear backwards infinite;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: zoom-in 7s linear backwards infinite; */
 }
 
 main .hero-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     padding: 0.5rem;
+    transition: 0.2s ease-in all;
+    opacity: 1;
+    /* animation: heroAnimation 1s linear ; */
 }
 
 .hero .btn-area {
@@ -380,17 +389,19 @@ footer .social {
     .hero p {
         margin: 0.5rem auto;
     }
-  
 }
 
 /* Adding Animations */
 @keyframes heroAnimation {
     0% {
-        opacity: 0;
+        opacity: 0.6;
+        transition: 0.2s ease-in;
     }
 
     100% {
-        opacity: 0.2 ease-in;
+        opacity: 1 ease-in;
+        transition: 0.4s ease-in all;
+        transform: translateX(-100%);
     }
 }
 
@@ -398,12 +409,12 @@ footer .social {
     0% {
         transition: 0.2s ease-in;
         opacity: 0.5;
-        transform: scale(0.8);
+        transform: translateX(0);
     }
 
     100% {
         transition: 0.2s ease-in-out;
         opacity: 0.5 ease-in;
-        transform: scale(1);
+        transform: translateX(-100%);
     }
 }
