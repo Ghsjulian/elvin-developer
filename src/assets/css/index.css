@@ -213,7 +213,6 @@ main .hero {
 
 main .hero-img {
     width: 100%;
-    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -224,7 +223,7 @@ main .hero-img {
 main .hero-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     padding: 0.5rem;
     transition: 0.2s ease-in all;
     opacity: 1;

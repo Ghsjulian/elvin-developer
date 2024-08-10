@@ -10,20 +10,31 @@
     color: #0e60f0;
     margin: 0.3rem auto;
 }
+
 .page .heading-text {
     text-align: center;
     justify-content: center;
-    color: #00e202;
+    color: #070707;
     margin: 0.5rem auto;
     font-size: 1.2rem;
 }
+
+.page .short-desc {
+    text-align: justify;
+    justify-content: center;
+    color: #1f1f1f;
+    margin: 0.5rem 1.7rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
 .row {
     display: grid;
     justify-content: center;
     gap: 0.5rem;
 }
 
-.row > * {
+.row>* {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 5px;
@@ -35,6 +46,7 @@
     object-fit: contain;
     height: auto;
 }
+
 .row .col .desc {
     justify-content: center;
     text-align: justify;
@@ -49,17 +61,18 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
-    gap: 10px;
+    gap: 12px;
     padding: 1rem 0.5rem;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
 .grid-row .card {
     padding: .3rem;
     height: 100%;
     justify-content: center;
-    margin: 0.5rem;
+    margin: .7rem 0.5rem;
     background: #ffffff;
     border-radius: 8px;
     box-shadow:
@@ -80,6 +93,7 @@
     object-fit: contain;
     border-radius: 8px;
 }
+
 .card p {
     color: #464646;
     font-weight: 500;
@@ -101,5 +115,9 @@
 @media only screen and (max-width: 768px) {
     .row {
         grid-template-columns: 1fr;
+    }
+
+    .page .short-desc {
+        margin: .5rem .7rem;
     }
 }

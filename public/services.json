@@ -1,8 +1,9 @@
 [
   {
-    "title": "Online Storefront",
+    "id": 1,
+    "title": "Online E-Commerce Store",
     "description": "Developed a fully functional e-commerce website using the MERN stack, allowing users to browse and purchase products online.",
-    "img_url" : "/images/Web_development.png",
+    "img_url": "/images/ecommerce.png",
     "keyFeatures": [
       "Product listing and categorization",
       "Shopping cart and checkout functionality",
@@ -13,9 +14,11 @@
     ]
   },
   {
+    "id": 2,
     "title": "Blogging Hub",
     "description": "Created a blogging platform using the MERN stack, enabling users to create and publish blog posts, manage categories and tags, and interact with others through comments and social sharing.",
-    "img_url" : "/images/Web_development.png","keyFeatures": [
+    "img_url": "/images/writing.png",
+    "keyFeatures": [
       "User registration and login functionality",
       "Blog post creation, editing, and publishing",
       "Category and tag management",
@@ -25,9 +28,11 @@
     ]
   },
   {
+    "id": 3,
     "title": "Social Connect",
     "description": "Developed a social media application using the MERN stack, enabling users to create profiles, connect with friends, post updates, share media content, and interact with others through comments and likes.",
-   "img_url" : "/images/Web_development.png", "keyFeatures": [
+    "img_url": "/images/connect.png",
+    "keyFeatures": [
       "User registration and login functionality",
       "Profile creation and management",
       "Friend connection and management",
@@ -38,9 +43,11 @@
     ]
   },
   {
+    "id": 4,
     "title": "Personal Portfolio",
     "description": "Created a personal portfolio website using the MERN stack, showcasing my projects, skills, and experiences.",
-   "img_url" : "/images/Web_development.png", "keyFeatures": [
+    "img_url": "/images/hero_1.png",
+    "keyFeatures": [
       "Project showcase with filtering and sorting",
       "Skill and experience listing",
       "Responsive design for mobile and desktop devices",
@@ -49,9 +56,11 @@
     ]
   },
   {
+    "id": 5,
     "title": "Company Website",
     "description": "Developed a company website using the MERN stack, featuring employee profiles, news and events, product showcases, and contact information.",
-   "img_url" : "/images/Web_development.png", "keyFeatures": [
+    "img_url": "/images/company.png",
+    "keyFeatures": [
       "Employee profiles with photos and bios",
       "News and events section with filtering and sorting",
       "Product showcase with images and descriptions",
@@ -60,9 +69,11 @@
     ]
   },
   {
+    "id": 6,
     "title": "Learning Hub",
     "description": "Created an online learning platform using the MERN stack, enabling users to create and publish courses, track progress, and interact with instructors and peers.",
-    "img_url" : "/images/Web_development.png","keyFeatures": [
+    "img_url": "/images/Graphicsdesign.png",
+    "keyFeatures": [
       "Course creation, editing, and publishing",
       "User registration and login functionality",
       "Course enrollment and progress tracking",
@@ -72,9 +83,11 @@
     ]
   },
   {
-    "title": "Job Search",
+    "id": 7,
+    "title": "Job Search Portal",
     "description": "Developed a job portal using the MERN stack, enabling users to search and apply for jobs, and allowing employers to post job listings and manage applications.",
-    "img_url" : "/images/Web_development.png","keyFeatures": [
+    "img_url": "/images/search_portal.png",
+    "keyFeatures": [
       "Job listing with filtering and sorting",
       "User registration and login functionality",
       "Job application and management",
@@ -83,9 +96,11 @@
     ]
   },
   {
+    "id": 8,
     "title": "Food Delivery Website",
     "description": "Developed a food delivery website using the MERN stack, enabling users to order food from local restaurants, track orders, and make payments.",
-    "img_url" : "/images/Web_development.png","keyFeatures": [
+    "img_url": "/images/food.png",
+    "keyFeatures": [
       "Restaurant listing with filtering and sorting",
       "Menu management with pricing and descriptions",
       "Order tracking and management",
@@ -94,9 +109,11 @@
     ]
   },
   {
+    "id": 9,
     "title": "Travel Booking Website",
     "description": "Created a travel booking website using the MERN stack, allowing users to search and book flights, hotels, and rental cars, and enabling travel agencies to manage their listings and bookings.",
-   "img_url" : "/images/Web_development.png", "keyFeatures": [
+    "img_url": "/images/travel.png",
+    "keyFeatures": [
       "Flight, hotel, and rental car listing with filtering and sorting",
       "Booking and payment management",
       "Travel agency dashboard for listing and booking management",
