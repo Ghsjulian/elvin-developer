@@ -109,12 +109,26 @@
     margin-top: 5rem;
 }
 
+.view-service {
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: column;
+}
 .view-service img  {
- width: 100%;
+ width: 50%;
  height: 100%;
  object-fit: contain;
+ margin: .2rem auto;
 }
-
+.page .long-desc {
+    width: 93%;
+    margin: .5rem auto;
+    line-height: 2.2rem;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: #464646;
+}
 /* Desktop layout */
 .row {
     grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
@@ -134,5 +148,9 @@
     }
     main {
         margin-top: 3.2rem;
+    }
+    .page .long-desc {
+       width: 95%;
+       margin: .4rem auto;
     }
 }

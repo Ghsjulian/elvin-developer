@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom'
+import WhatWeServe from "./WhatWeServe"
 
 const ViewService = () => {
     const { service_id } = useParams()
@@ -24,23 +25,26 @@ const ViewService = () => {
         if (isLoading) {
             return;
         }
+        window.scrollTo({ top: 0, behavior: "smooth" });
     }, [service_id]);
 
     return (
-        <main>
+     <>
             {
                 services && (<>
-                    <section className="page view-service">
-                        <h2>{services[0].title}</h2>
+                    <section className="main-page view-service">
                         <img src={services[0].img_url} />
                     </section>
                     <section className="page">
-                    <p className="desc">{services[0].description}</p>
+                    <h2>{services[0].title}</h2>
+                    <p className="long-desc">{services[0].long_desc}</p>
                     </section>
                     </>
                 )
-            }
-        </main>
+            }   
+            <br/><br/>
+            <WhatWeServe/>
+       </>
     )
 }
 

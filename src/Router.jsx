@@ -1,4 +1,5 @@
 /* Importing All Routes And Components Here...*/
+import Services from "./components/Services";
 import ViewService from "./components/ViewService";
 import Layouts from "./layouts/Layouts"
 import Home from "./pages/Home";
@@ -18,6 +19,10 @@ const MyRoutes = [
             {
                 path: "about",
                 element: <Home />,
+            },
+            {
+                path: "services",
+                element: <Services/>
             },
             {
                 path: "resume",
