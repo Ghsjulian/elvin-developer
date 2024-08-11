@@ -2,11 +2,16 @@ import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-    const [isOpen, setisOpen] = useState(true)
+    const [isOpen, setisOpen] = useState(true);
     const navRef = useRef(null);
     const openNav = () => {
         navRef.current.classList.toggle("navbar");
-        setisOpen(!isOpen)
+        setisOpen(!isOpen);
+    };
+    const closeNav = () => {
+        // navRef.current.classList.toggle("nav");
+        setisOpen(false);
+        alert("ok");
     };
 
     return (
@@ -19,8 +24,10 @@ const Header = () => {
             {/*<h3 className="logo">Elviano</h3>*/}
             <nav ref={navRef} className="nav">
                 <ul>
-                    <li>
-                        <NavLink to="/">Home</NavLink>
+                    <li onClck={closeNav}>
+                        <NavLink to="/">
+                            Home
+                        </NavLink>
                     </li>
                     <li>
                         <NavLink to="/services">Services</NavLink>
@@ -36,7 +43,7 @@ const Header = () => {
             <img
                 onClick={openNav}
                 className="menu"
-                src={isOpen? "/icons/burger_menu.png" : "/icons/delete.png"} 
+                src={isOpen ? "/icons/burger_menu.png" : "/icons/delete.png"}
             />
         </header>
     );

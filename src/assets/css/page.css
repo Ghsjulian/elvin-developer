@@ -135,6 +135,163 @@
     grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
 }
 
+/* Contact About Works Styling */ 
+
+.two-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.8rem auto;
+    padding: 0.5rem 0.7rem;
+}
+
+.two-row .image {
+    padding: 0.5rem;
+}
+
+.two-row .image img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    margin: 1rem auto;
+}
+
+.two-row .form {
+    background: #ffffff;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.7rem;
+    border-radius: 8px;
+}
+
+.two-row #content {
+    background: transparent;
+}
+
+.form .text {
+    width: 100%;
+    text-align: left;
+    line-height: 2.5rem;
+}
+
+.form h3 {
+    margin: 1rem auto;
+}
+
+.form .error {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 0.1px solid #ea1800;
+    color: #ea1800;
+    background: #ea18003a;
+    padding: 0.5rem 0.7rem;
+}
+
+.form .success {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 0.1px solid #00a528;
+    color: #00a528;
+    background: #00a5283f;
+    padding: 0.5rem 0.7rem;
+}
+
+.form input {
+    outline: none;
+    border: 1px solid rgb(0, 197, 202);
+    padding: 0.8rem 1rem;
+    margin: 0.9rem auto;
+    border-radius: 8px;
+    width: 90%;
+}
+
+.form textarea {
+    width: 90%;
+    height: 90px;
+    outline: none;
+    border: 1px solid rgb(0, 197, 202);
+    padding: 0.8rem 1rem;
+    margin: 0.7rem auto;
+    border-radius: 8px;
+    font-family: Sans-Serif;
+}
+
+.form input:focus {
+    border: 1px solid rgb(38, 192, 0);
+}
+
+.form .send-btn {
+    width: 120px;
+    outline: none;
+    border: none;
+    margin: 0.5rem auto;
+    padding: 0.7rem 1rem;
+    background: rgb(19, 97, 0);
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+/*  WHY US DESIGNING */
+.row-four {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
+    gap: 10px;
+    margin: 1rem auto;
+    padding: 1rem;
+    /* background: rgb(239, 239, 239); */
+}
+
+.row-four .column {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: #0069a6;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 0.1px solid rgb(0, 207, 150);
+    /* box-shadow:
+        2px 2px 4px #c7c7c7,
+        -2px -2px 4px #c7c7c7; */
+}
+
+.column h4 {
+    color: rgb(0, 226, 229);
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+    margin: 0.2rem auto;
+}
+
+.column img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0.1rem auto;
+}
+
+.column .p-text {
+    color: rgb(255,255,255);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.8rem;
+    text-align: left;
+    justify-content: left;
+    text-transform: capitalize;
+    margin: 0.2rem 0.5rem;
+    font-family: poppin-thin;
+}
+
+
 /* Mobile layout */
 @media only screen and (max-width: 768px) {
     .row {
@@ -152,5 +309,25 @@
     .page .long-desc {
        width: 95%;
        margin: .4rem auto;
+    }
+    
+     .two-row {
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+
+    .two-row .form {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .form input,
+    .form textarea {
+        width: 100%;
+    }
+    .row-four {
+        margin-top: 5%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 }
