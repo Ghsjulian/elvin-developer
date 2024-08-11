@@ -59,7 +59,7 @@ const Contact = () => {
             <div data-aos="zoom-in" id="page" className="section">
                 <div className="two-row">
                     <div data-aos="zoom-in" className="image">
-                        <img src="/images/shopping.png" />
+                        <img src="/images/contact.jpg" />
                     </div>
                     <div data-aos="zoom-in" className="form">
                         <p className="text">

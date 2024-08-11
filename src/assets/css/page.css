@@ -252,6 +252,7 @@
 }
 
 .row-four .column {
+    height: 100%;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -291,7 +292,45 @@
     font-family: poppin-thin;
 }
 
+.one-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.one-flex h2 {
+    color: #0e60f0;
+    margin: .4rem auto;
+}
+.one-flex ul {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
 
+}
+
+.one-flex .desc ,.desc {
+    width: 80%;
+    line-height: 2.2rem;
+    text-transform: capitalize;
+    margin: .5rem auto;
+}
+.one-flex .expert {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.expert .col {
+    margin: .5rem auto;
+}
+.expert .col li {
+    width: 100%;
+    margin: .5rem;
+    display: flex;
+    align-items: center;
+}
 /* Mobile layout */
 @media only screen and (max-width: 768px) {
     .row {
@@ -300,22 +339,24 @@
    .page h2 {
     margin: .5rem .3rem;
    }
-    .page .short-desc {
+    .page .short-desc  {
         margin: .5rem .7rem;
     }
     main {
         margin-top: 3.2rem;
     }
-    .page .long-desc {
+    .page .long-desc, .one-flex .desc, .desc {
        width: 95%;
        margin: .4rem auto;
     }
     
-     .two-row {
+     .two-row,.one-flex .expert  {
         flex-direction: column;
         margin: 0.5rem;
     }
-
+    .one-flex .expert .col {
+width: 100%;
+    }
     .two-row .form {
         width: 100%;
         padding: 0.5rem;

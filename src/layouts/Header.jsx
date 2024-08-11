@@ -9,9 +9,7 @@ const Header = () => {
         setisOpen(!isOpen);
     };
     const closeNav = () => {
-        // navRef.current.classList.toggle("nav");
-        setisOpen(false);
-        alert("ok");
+        openNav()
     };
 
     return (
@@ -23,22 +21,22 @@ const Header = () => {
             />
             {/*<h3 className="logo">Elviano</h3>*/}
             <nav ref={navRef} className="nav">
-                <ul>
-                    <li onClck={closeNav}>
-                        <NavLink to="/">
+                <div className="list">
+                    <li>
+                        <NavLink onClick={closeNav} to="/">
                             Home
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/services">Services</NavLink>
+                        <NavLink onClick={closeNav} to="/services">Services</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/about-us">About</NavLink>
+                        <NavLink onClick={closeNav} to="/about-us">About</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contact-us">Contact</NavLink>
+                        <NavLink onClick={closeNav} to="/contact-us">Contact</NavLink>
                     </li>
-                </ul>
+                </div>
             </nav>
             <img
                 onClick={openNav}
